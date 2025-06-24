@@ -35,7 +35,7 @@ for floor in range(floors_per_block - 1):  # adjacency across floors
 # ==================================================
 # EXPORT TO .csv
 # ==================================================
-filename = "ktdi_adjacency_matrix.csv"
+filename = "Results/ktdi_adjacency_matrix.csv"
 
 with open(filename, "w", newline="") as file:
     writer = csv.writer(file)

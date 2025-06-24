@@ -83,15 +83,15 @@ def draw_graph(edges, node_range, title, filename):
 # ==================================================
 # DRAW MAWAR
 # ==================================================
-draw_graph(adj_mawar, (0, 72), "Mawar Block: Channel Assignment Graph", "mawar_block.png")
+draw_graph(adj_mawar, (0, 72), "Mawar Block: Channel Assignment Graph", "Results/mawar_block.png")
 
 # ==================================================
 # DRAW KENANGA
 # ==================================================
-draw_graph(adj_kenanga, (72, 144), "Kenanga Block: Channel Assignment Graph", "kenanga_block.png")
+draw_graph(adj_kenanga, (72, 144), "Kenanga Block: Channel Assignment Graph", "Results/kenanga_block.png")
 
 # ==================================================
 # DRAW COMBINED
 # ==================================================
 draw_graph(all_edges, (0, 144), "Mawar + Kenanga Blocks: Combined Channel Graph",
-           "ktdi_combined.png")
+           "Results/ktdi_combined.png")

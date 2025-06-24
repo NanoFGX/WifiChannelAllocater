@@ -56,9 +56,9 @@ def export_matrix(matrix, filename):
         for row in matrix:
             writer.writerow(row)
 
-export_matrix(adj_mawar, "ktdi_adjacency_mawar.csv")
-export_matrix(adj_kenanga, "ktdi_adjacency_kenanga.csv")
-export_matrix(adj_total, "ktdi_adjacency_total.csv")
+export_matrix(adj_mawar, "Results/ktdi_adjacency_mawar.csv")
+export_matrix(adj_kenanga, "Results/ktdi_adjacency_kenanga.csv")
+export_matrix(adj_total, "Results/ktdi_adjacency_total.csv")
 
 # ==================================================
 # EXPORT TO JSON
@@ -68,7 +68,7 @@ adj_json = {
     "Kenanga": adj_kenanga.tolist(),
     "Total": adj_total.tolist()
 }
-with open("ktdi_adjacency.json", "w") as json_file:
+with open("Results/ktdi_adjacency.json", "w") as json_file:
     json.dump(adj_json, json_file, indent=4)
 
 print("\n✅ Export Complete!\n- ktdi_adjacency_mawar.csv\n- ktdi_adjacency_kenanga.csv\n- ktdi_adjacency_total.csv\n- ktdi_adjacency.json\n")
