@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class AdjacencyGenerator {
+    public static List<List<Integer>> buildAdjacency(int roomsPerFloor, int floorsPerBlock, int startIndex) {
+        List<List<Integer>> adjacency = new ArrayList<>();
+        for (int floor = 0; floor < floorsPerBlock; floor++) {
+            int offset = floor * roomsPerFloor + startIndex;
+
+            // Same floor adjacency
+            for (int room = 0; room < roomsPerFloor - 1; room++) {
+                adjacency.add(Arrays.asList(offset + room, offset + room + 1));
+            }
+
+            // Vertical adjacency
+            if (floor < floorsPerBlock - 1) {
+                for (int room = 0; room < roomsPerFloor; room++) {
+                    adjacency.add(Arrays.asList(floor * roomsPerFloor + room + startIndex,
+                            (floor + 1) * roomsPerFloor + room + startIndex));
+                }
+            }
+        }
+        return adjacency;
+    }
+}
