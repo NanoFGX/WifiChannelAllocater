@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KTDI Wi-Fi Optimization Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: #f9f9f9;
+      --primary: #f2c94c;
+      --dark: #1f1f1f;
+      --gray: #333;
+      --white: #ffffff;
+      --light-gray: #e0e0e0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--main-bg);
+      color: var(--gray);
+    }
+
+    header {
+      background: var(--dark);
+      color: var(--white);
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #cccccc;
+    }
+
+    nav {
+      background-color: var(--white);
+      padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+      color: var(--dark);
+    }
+
+    section {
+      padding: 50px 60px;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--light-gray);
+      max-width: 1000px;
+      margin: 0 auto 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: var(--gray);
+      border-left: 6px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+
+    pre {
+      background-color: var(--main-bg);
+      padding: 15px;
+      overflow-x: auto;
+      border-left: 4px solid var(--primary);
+      color: var(--gray);
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>KTDI Wi-Fi Optimization Project</h1>
+  <p>Greedy Graph Coloring with Heuristics for Network Efficiency</p>
+</header>
+
+<nav>
+  <a href="#background">Background</a>
+  <a href="#problem">Problem</a>
+  <a href="#need">What We Need</a>
+  <a href="#importance">Importance</a>
+  <a href="#modelling">Modelling</a>
+  <a href="#constraints">I/O</a>
+  <a href="#solutions">Solutions</a>
+  <a href="#algorithm">Algorithm</a>
+  <a href="#flow">Flow</a>
+  <a href="#pseudocode">Pseudocode</a>
+  <a href="#flowchart">Flowchart</a>
+  <a href="#implementation">Implementation</a>
+  <a href="#optimization">Optimization</a>
+  <a href="#complexity">Complexity</a>
+  <a href="#results">Results</a>
+  <a href="#reflection">Reflection</a>
+  <a href="#conclusion">Conclusion</a>
+</nav>
+
+<section id="background">
+  <h2>Background</h2>
+  <p>Kolej Tun Dr. Ismail (KTDI), located in Universiti Putra Malaysia, houses hundreds of students across Blok Mawar and Blok Kenanga. These residential blocks face frequent Wi-Fi disruptions, especially during peak usage times like evenings and weekends. Thick cement walls and uncoordinated router placement contribute to poor signal penetration and overlapping channels. Students rely heavily on stable internet connections for online classes, assignments, and communication, making this a critical issue. An optimized network setup is essential to support their academic and digital needs.</p>
+  <img src="blok.jpg">
+</section>
+
+<section id="problem">
+  <h2>Problem Statement</h2>
+  <img src="problem.jpg">
+</section>
+
+<section id="need">
+  <h2>What We Need</h2>
+   <img src="why.jpg">
+</section>
+
+<section id="importance">
+  <h2>Why It's Important</h2>
+  <img src="Why its important.jpg" alt="Why It's Important Slide">
+</section>
+
+<section id="modelling">
+  <h2>Problem Modelling</h2>
+   <img src="blueprint.jpg">
+  <img src="Problem Modeling.jpg" alt="Problem Modeling Slide">
+</section>
+
+<section id="constraints">
+  <h2>Inputs, Outputs & Constraints</h2>
+  <ul>
+    <li><strong>Inputs:</strong> Room matrix, available channels</li>
+    <li><strong>Outputs:</strong> Channel assignments, router placements</li>
+    <li><strong>Constraints:</strong> No channel repetition for neighbors, all rooms must be covered</li>
+  </ul>
+  <img src="Input, Output Constraints.jpg" alt="Input Output Constraints Slide">
+</section>
+
+<section id="solutions">
+  <h2>Potential Solutions</h2>
+  <img src="table.jpg" alt="Comparison Table of Algorithm Paradigms">
+  <p><strong>Algorithm:</strong> Greedy Graph Coloring + Welsh-Powell Heuristic was used</p>
+</section>
+
+<section id="algorithm">
+  <h2>Chosen Algorithm</h2>
+  <ul>
+    <li><strong>Graph Coloring:</strong> Models interference between adjacent rooms.</li>
+    <li><strong>Greedy Strategy:</strong> Assigns lowest non-conflicting channel.</li>
+    <li><strong>Welsh-Powell:</strong> Sorts rooms by degree for optimized coloring.</li>
+  </ul>
+  <img src="Chosen Algo.jpg" alt="Chosen Algorithm Slide">
+</section>
+
+<section id="flow">
+  <h2>Flow Diagram</h2>
+     <img src="why.jpg">
+</section>
+
+<section id="pseudocode">
+  <h2>Pseudocode</h2>
+  <img src="Pseudocode.jpg" alt="Pseudocode Slide">
+</section>
+
+<section id="flowchart">
+  <h2>Flowchart</h2>
+  <img src="flowchart.jpg" alt="Flowchart of solution">
+</section>
+
+<section id="implementation">
+  <h2>Algorithm Implementation</h2>
+  <p><strong>Output Produced:</strong></p>
+  <ul>
+    <li><code>adjacency_total.csv</code>: Lists adjacency pairs</li>
+    <li><code>channel_assignment.csv</code>: Lists room number and assigned channel</li>
+  </ul>
+  <p><strong>Verification:</strong></p>
+  <ul>
+    <li>Tested adjacency constraints across rooms and floors</li>
+    <li>Confirmed no adjacent rooms use the same channel</li>
+  </ul>
+  <p><strong>Steps Followed:</strong></p>
+  <ol>
+    <li>Created adjacency matrices for rooms across blocks and floors</li>
+    <li>Applied Greedy Graph Coloring algorithm to assign channels</li>
+    <li>Marked and validated that no two connected nodes share the same channel</li>
+  </ol>
+  <img src="Algo Implementation.jpg" alt="Algorithm Implementation Slide">
+</section>
+
+<section id="optimization">
+  <h2>Optimization & Heuristic</h2>
+  <img src="Optimization Heuristic.jpg" alt="Optimization Heuristic Slide">
+</section>
+
+<section id="complexity">
+  <h2>Correctness & Complexity Analysis</h2>
+  <img src="Correctness Complexity Analysis.jpg" alt="Correctness and Complexity Slide">
+</section>
+
+<section id="results">
+  <h2>Results</h2>
+  <img src="result.jpg" alt="Result Visualization: Channel Assignment">
+</section>
+
+<section id="reflection">
+  <h2>Reflection & Lessons Learned</h2>
+  <ul>
+    <li>We learned how to apply abstract concepts such as graph coloring to practical engineering problems.</li>
+    <li>The team gained experience in collaborative coding, debugging, and performance tuning using Java.</li>
+    <li>Working on this project deepened our understanding of algorithm design, especially in real-world applications like network optimization.</li>
+    <li>We faced challenges in modeling adjacency and ensuring correctness across multiple scenarios, which taught us the importance of thorough testing.</li>
+  </ul>
+</section>
+
+<section id="conclusion">
+  <h2>Conclusion</h2>
+  <p>We successfully addressed the Wi-Fi connectivity issues in Blok Mawar and Kenanga using a graph-based modeling approach.</p>
+  <p>By incorporating the Welsh-Powell heuristic, we further reduced the number of routers and channels needed.</p>
+  <p>Our algorithm ensures minimal signal interference by optimally assigning Wi-Fi channels through Greedy Graph Coloring.</p>
+  <p>The solution improved overall network coverage, reduced congestion, and enhanced digital accessibility for KTDI residents.</p>
+</section>
+
+<footer>
+  <h2>Team Members</h2>
+  <p>SRIRAM A/L SUNDRADAS</p>
+  <p>NITESH A/L PRAKASH</p>
+  <p>ZAKARIA BIN ALI</p>
+  <p>ADIB ZAQWAN BIN ISKANDAR</p>
+</footer>
+
+</body>
+</html>
